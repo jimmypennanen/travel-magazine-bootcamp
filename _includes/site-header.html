@@ -12,8 +12,15 @@
 
 {% if page.banner.banner-image %}
 
-<section class="min-h-80 bg-cover bg-center p-15p text-white" style="background-image: url('{{ page.banner.banner-image}}');">
+<section class="min-h-80 bg-cover bg-center p-15p text-white" style="background-image: url('{{ page.banner.banner-image}}'); background-position: {{ page.banner.banner-position }}">
     <div class="max-w-screen-2xl">
+
+        {% if page.banner.button-url  %}   
+        
+        <span> {{page.banner.top-text}} </span>
+       
+        {% endif %}
+
 
         <h1 class="text-9xl"> {{ page.banner.heading}} </h1>
         <p class="max-w-[50%]"> {{ page.banner.description }}</p>

@@ -3,13 +3,16 @@ layout: default
 ---
 
 <!-- this is the first intro section -->
-<section class="p-8 bg-stone-100">  
-	<h1> {{page.title}} </h1>
-	<p> By {{page.author}} </p>
+<section class="p-8 border-b border-black text-center">  
+	<div class="max-w-screen-2xl flex justify-between items-center">
+		<p class="mb-0"> By {{ page.author }} </p>
+		<h1 class="mb-0"> {{ page.title }} </h1>
+		<p class="mb-0"> {{ page.date | date_to_long_string }} </p>
+	</div>
 </section>
 
 <!-- this is the main content section -->
-<section class="p-8">
+<section class="p-5p">
 	{{ content }}
 </section> 
 

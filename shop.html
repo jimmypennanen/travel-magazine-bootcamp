@@ -1,1 +1,72 @@
-<p class="bg-teal-400"> This is some text on the shop </p>
+---
+layout: default
+banner:
+  banner-image: images/blog-bg-17.jpg
+  banner-position: 2% 100%
+  top-text: Shop Our
+  heading: Explore Sumbabwa
+  description: Natures teaches you to appreciate the finer things in life, to be present, live in the moment and just breath. 
+  button-url: bob
+  button-text:
+  button-color:
+block-image:
+  image: /images/blog-bg-10.jpg
+  text: "once you get a tast for travel you'll never be the same"
+  position: 50% 50%
+seo:
+  title: Travel Magazine
+  description: "Your description goes here"
+  keywords: "your, keywords, go, here"
+  social_image: "path/to/social/image.jpg"
+  hide-from-google: false
+---
+
+<section class="p-5p pb-0 bg-stone-200">
+    <div class="max-w-screen-2xl p-5p">
+        <h3 class="text-center uppercase text-4xl m-0 px-5p pb-5p"> travel guides </h3>
+       
+        <div class="grid grid-cols-3 gap-4"> 
+        {% for item in site.products-guides %}
+
+        <div class="bg-white">
+            <a href="#">
+            <div class="bg-center bg-cover min-h-[30vw]" style="background-image: url('{{ item.featured-image }}');"></div>
+            <div class="p-5">
+                <h4 class="uppercase mb-5"> {{ item.title }} </h4>
+                <p class="mb-5"> {{ item.description }} </p>
+                <span class="">$ {{ item.price }} </span>
+            </div>
+            </a>
+        </div>
+
+        {% endfor %}
+    </div>
+
+    </div>
+</section>
+
+{% include big-image-banner.html %}
+
+<section class="p-5p pt-0 bg-stone-200">
+    <div class="max-w-screen-2xl p-5p">
+        <h3 class="text-center uppercase text-4xl m-0 px-5p pb-5p"> lightroom presets </h3>
+       
+        <div class="grid grid-cols-3 gap-4"> 
+        {% for item in site.products-presets %}
+
+        <div class="bg-white">
+            <a href="#">
+            <div class="bg-center bg-cover min-h-[30vw]" style="background-image: url('{{ item.featured-image }}');"></div>
+            <div class="p-5">
+                <h4 class="uppercase mb-5"> {{ item.title }} </h4>
+                <p class="mb-5"> {{ item.description }} </p>
+                <span class="">$ {{ item.price }} </span>
+            </div>
+            </a>
+        </div>
+
+        {% endfor %}
+    </div>
+
+    </div>
+</section>
