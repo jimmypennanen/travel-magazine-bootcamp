@@ -2,7 +2,7 @@
 layout: post
 title: Third Blog Post 
 description: "This is a short description of the first blog post"
-featured_image: 'https://picsum.photos/id/870/600/400'
+featured-image: images/blog-bg-12.jpg
 author: Your Name
 seo: 
   title: "This should appear in the browser tab"

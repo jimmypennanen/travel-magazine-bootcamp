@@ -1,12 +1,13 @@
 ---
 layout: default
 banner:
-  banner-image: 'https://picsum.photos/id/318/600/400'
-  heading: a whole new world
+  banner-image: images/blog-bg-12.jpg
+  heading: A Whole New World
   description: Surfing teaches you to appreciate the finer things in life, to be present, live in the moment and just breath. 
   button-url:
   button-text:
-about-image: 'https://picsum.photos/id/318/600/400'
+about-image: images/blog-bg-13.jpg
+travel-image: images/blog-bg-14.jpg
 seo:
   title: Travel Magazine
   description: "Your description goes here"
@@ -19,7 +20,7 @@ seo:
 <section class="p-5p bg-stone-200">
   <div class="max-w-screen-2xl grid grid-cols-2">
 
-    <div class="pb-120p bg-cover bg-center" style="background-image: url('{{ post.featured_image}}');"></div>
+    <div class="pb-120p bg-cover bg-center" style="background-image: url('{{ page.about-image}}');"></div>
     <div class="p-5p self-center">
       <h2 class="editable text-6xl max-w-md"> A fascinating heading about the site. </h2>
       <p class="editable"> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. </p>
@@ -35,3 +36,5 @@ seo:
 <!-- recent blog posts section -->
 
 {% include post-loop-item.html %}
+
+

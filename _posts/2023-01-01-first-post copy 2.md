@@ -2,7 +2,7 @@
 layout: post
 title: First Blog Post 
 description: "This is a short description of the first blog post"
-featured-image: images/blog-bg-4.jpg
+featured-image: images/blog-bg-1.jpg
 author: Your Name
 seo: 
   title: "This should appear in the browser tab"

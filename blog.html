@@ -1,14 +1,37 @@
 ---
 layout: default
+banner:
+  banner-image: images/blog-bg-10.jpg
+  heading: Explore Sumbabwa
+  description: Natures teaches you to appreciate the finer things in life, to be present, live in the moment and just breath. 
+  button-url: bob
+  button-text: READ MORE
+  button-color: '#000'
+seo:
+  title: Travel Magazine
+  description: "Your description goes here"
+  keywords: "your, keywords, go, here"
+  social_image: "path/to/social/image.jpg"
+  hide-from-google: false
 ---
-<p class="bg-blue-400"> This is some text on the blog </p>
-<section class="p-8 grid grid-cols-3 gap-5">
+<section class="p-5p">
+	<div class="max-w-screen-2xl">
 
-	{% for post in site.posts %}
-	
-	{% include post-loop-item.html %}
-	
-	{% endfor %}
+		<h3 class="text-center uppercase text-4xl m-0 px-5p pb-5p"> Recently on the blog.</h3>
+		
+		<div class="columns-3">
 
-</section> 
+			{% for item in site.posts %}
+		   
+			<div class="break-inside-avoid">
+				<img src="{{item.featured-image}}" alt="">
+				<h4 class="uppercase m-5"> {{ item.title }} </h4>
+				<p class="m-5"> {{ item.description }} </p>
+				<a href="{{item.url}}"" class="uppercase border-b border-black  inline-block m-5 mt-0">  Read More </a>  
+			</div>
+		   
+			{% endfor %}
+			</div>  
 
+	</div>
+</section>

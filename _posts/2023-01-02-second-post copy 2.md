@@ -1,8 +1,8 @@
 ---
-layout: post
-title: First Blog Post 
+layout: post-with-sidebar
+title: Second Blog Post 
 description: "This is a short description of the first blog post"
-featured-image: images/blog-bg-4.jpg
+featured-image: images/blog-bg-5.jpg
 author: Your Name
 seo: 
   title: "This should appear in the browser tab"

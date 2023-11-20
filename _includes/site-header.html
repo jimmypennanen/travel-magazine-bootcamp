@@ -1,7 +1,7 @@
 <header> 
 <div class="flex justify-between uppercase max-w-screen-2xl mx-auto p-5">
         
-    <a href=""> logo </a>
+    <a href="/index.html"> logo </a>
     <nav class="flex gap-4">
         <a href="/blog.html"> blog </a>
         <a href="/shop.html"> shop </a>
@@ -18,8 +18,8 @@
         <h1 class="text-9xl"> {{ page.banner.heading}} </h1>
         <p class="max-w-[50%]"> {{ page.banner.description }}</p>
 
-        {% if page.banner.banner-image %}   
-        <a href="{{ page.banner.button-url }}"> {{ page.banner.button-text }} </a>
+        {% if page.banner.button-url  %}   
+        <a href="{{ page.banner.button-url }}" class="border-b-2 border-current" style="color: {{page.banner.button-color}}"> {{ page.banner.button-text }} </a>
         {% endif %}
 
     </div>
