@@ -1,0 +1,27 @@
+<section class=" p-5p">
+
+    <!-- this is our max-w div -->
+    <div class="max-w-screen-2xl">
+        <h2 class="editable text-center uppercase pb-8 text-4xl"> upcoming travel destinations </h2>
+    <!-- this is our grid div -->
+
+        <div class="grid grid-cols-2 gap-8">
+            
+            <div>
+
+            {% for item in site.data.travel-dates %}
+                <div class=" flex justify-between border-t-2 last:border-b-2 py-4">
+                    <h3 class="m-0"> {{ item.destination }} </h3>
+                    <p class="m-0"> {{ item.date }} </p>
+                </div>
+            {% endfor %}
+
+            </div>
+
+            <div class="bg-stone-200 bg-cover bg-center p-5p pl-0 flex items-end" style="background-image: url('{{ page.about-image}}');">
+                <h3 class="bg-stone-200 p-2 pr-4 text-4xl editable"> Currently in Tuscany </h3>
+            </div>
+        </div>
+  
+    </div>
+  </section>

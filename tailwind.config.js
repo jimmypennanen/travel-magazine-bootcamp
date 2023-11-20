@@ -16,6 +16,7 @@ module.exports = {
           '5p': '5%',
           '10p': '10%',
           '15p': '15%',
+          '120p': '120%',
         },
         aspectRatio: {
           'landscape': '2 / 1 ',
