@@ -1,8 +1,8 @@
 ---
 layout: post
-title: Second Blog Post 
+title: Copenhagen
 description: "This is a short description of the first blog post"
-featured-image: images/blog-bg-7.jpg
+featured-image: images/blog-bg-12.jpg
 author: Your Name
 banner:
   banner-image: images/blog-bg-10.jpg

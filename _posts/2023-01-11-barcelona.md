@@ -1,11 +1,11 @@
 ---
 layout: post
-title: First Blog Post 
+title: Barcelona 
 description: "This is a short description of the first blog post"
-featured-image: images/blog-bg-1.jpg
+featured-image: images/blog-bg-11.jpg
 author: Your Name
 banner:
-  banner-image: /images/blog-bg-12.jpg
+  banner-image: images/blog-bg-10.jpg
   heading: Explore Sumbabwa
   description: Natures teaches you to appreciate the finer things in life, to be present, live in the moment and just breath.
 seo: 
