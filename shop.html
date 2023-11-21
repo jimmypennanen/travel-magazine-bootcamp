@@ -3,11 +3,11 @@ layout: default
 banner:
   banner-image: images/blog-bg-17.jpg
   banner-position: 2% 100%
-  top-text: Shop Our
-  heading: Explore Sumbabwa
+  top-text:
+  heading: Shop.
   description: Natures teaches you to appreciate the finer things in life, to be present, live in the moment and just breath. 
-  button-url: bob
-  button-text:
+  button-url: /shop-featured.html
+  button-text: Featured shop
   button-color:
 block-image:
   image: /images/blog-bg-10.jpg
@@ -21,49 +21,25 @@ seo:
   hide-from-google: false
 ---
 
-<section class="p-5p pb-0 bg-stone-200">
+<section class="p-5p pt-0 pb-0 bg-stone-200">
     <div class="max-w-screen-2xl p-5p">
-        <h3 class="text-center uppercase text-4xl m-0 px-5p pb-5p"> travel guides </h3>
+        <h3 class="text-center uppercase text-4xl m-0 px-5p pb-5p"> Exlore all our products </h3>
+        <div class="flex flex-cols-3 justify-center gap-4 pb-5p">
+            <p class=" border border-black px-8 py-2 hover:bg-black hover:text-white"> show all</p>
+            <p class=" border border-black px-8 py-2 hover:bg-black hover:text-white"> travel guides</p>
+            <p class=" border border-black px-8 py-2 hover:bg-black hover:text-white"> presets  </p>
+        </div>
        
-        <div class="grid grid-cols-3 gap-4"> 
+        <div class="grid grid-cols-3 gap-6"> 
         {% for item in site.products-guides %}
 
-        <div class="bg-white">
-            <a href="#">
-            <div class="bg-center bg-cover min-h-[30vw]" style="background-image: url('{{ item.featured-image }}');"></div>
-            <div class="p-5">
-                <h4 class="uppercase mb-5"> {{ item.title }} </h4>
-                <p class="mb-5"> {{ item.description }} </p>
-                <span class="">$ {{ item.price }} </span>
-            </div>
-            </a>
-        </div>
+            {% include products.html type="guide" %}
 
         {% endfor %}
-    </div>
-
-    </div>
-</section>
-
-{% include big-image-banner.html %}
-
-<section class="p-5p pt-0 bg-stone-200">
-    <div class="max-w-screen-2xl p-5p">
-        <h3 class="text-center uppercase text-4xl m-0 px-5p pb-5p"> lightroom presets </h3>
-       
-        <div class="grid grid-cols-3 gap-4"> 
+ 
         {% for item in site.products-presets %}
 
-        <div class="bg-white">
-            <a href="#">
-            <div class="bg-center bg-cover min-h-[30vw]" style="background-image: url('{{ item.featured-image }}');"></div>
-            <div class="p-5">
-                <h4 class="uppercase mb-5"> {{ item.title }} </h4>
-                <p class="mb-5"> {{ item.description }} </p>
-                <span class="">$ {{ item.price }} </span>
-            </div>
-            </a>
-        </div>
+            {% include products.html type="preset" %}
 
         {% endfor %}
     </div>
