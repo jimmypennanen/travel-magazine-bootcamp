@@ -1,0 +1,59 @@
+--- 
+layout: default
+---
+
+{% include split-banner.html %}
+
+<section class="p-5p pb-0">
+    <div class="max-w-screen-2xl grid grid-cols-2 items-center">
+
+        <div>
+            <img src="{{ page.before-after-images[0].image }}" class="aspect-video w-full object-cover" alt="{{ page.before-after-images[0].alt }}">
+
+            <div class="grid grid-cols-6 gap-4 mt-[1rem]">
+
+                {% for items in page.before-after-images %}
+                 <img src=" {{ items.image }} " alt="">
+                {% endfor %}
+
+            </div>
+        </div>
+        
+
+        <div class="p-15p">
+            <h2 class="uppercase"> Before & After </h2>
+            <p> Lorem ipsum dolor, sit amet consectetur adipisicing elit. Iure voluptate quis inventore eligendi nostrum rem repellat, itaque sapiente esse et molestias eum, voluptatem incidunt mollitia asperiores. Harum fugit vel quasi.</p>
+        </div>
+
+    </div>
+</section>
+
+<section class="p-5p pb-0">
+    <div class="max-w-screen-2xl grid grid-cols-2 items-center">
+
+        <!-- <div class="p-15p">
+            <h2 class="uppercase"> how to use your presets </h2>
+            <p> Lorem ipsum dolor, sit amet consectetur adipisicing elit. Iure voluptate quis inventore eligendi nostrum rem repellat, itaque sapiente esse et molestias eum, voluptatem incidunt mollitia asperiores. Harum fugit vel quasi.</p>
+        </div> -->
+
+        <div class=" mx-auto">
+            <h3 class="text-4xl uppercase pb-8"> {{page.list-title}} </h3>
+            
+                {% for item in page.list %}
+
+              <ul class="list-disc mb-2"><li> {{item.text}} </li></ul>  
+
+                {% endfor %}
+
+        </div>
+
+        <div>
+            <img src="/images/blog-bg-3.jpg" class="aspect-video w-full object-cover" alt="">
+        </div>
+        
+    </div>
+</section>
+
+<section class="p-5p">
+    {% include faqs.html %}
+</section>

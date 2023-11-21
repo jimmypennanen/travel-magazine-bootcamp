@@ -506,14 +506,26 @@ p {
 .mt-\[1rem\] {
   margin-top: 1rem;
 }
+.mb-8 {
+  margin-bottom: 2rem;
+}
+.mb-4 {
+  margin-bottom: 1rem;
+}
 .inline-block {
   display: inline-block;
 }
 .flex {
   display: flex;
 }
+.table {
+  display: table;
+}
 .grid {
   display: grid;
+}
+.contents {
+  display: contents;
 }
 .aspect-video {
   aspect-ratio: 16 / 9;
@@ -553,6 +565,9 @@ p {
 }
 .shrink-0 {
   flex-shrink: 0;
+}
+.list-disc {
+  list-style-type: disc;
 }
 .columns-3 {
   -moz-columns: 3;

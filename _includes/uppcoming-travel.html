@@ -3,14 +3,14 @@
     <!-- this is our max-w div -->
     <div class="max-w-screen-2xl">
         
-        <h3 class="editable text-center uppercase pb-8 text-4xl"> upcoming travel destinations </h3>
+        <h3 class="editable text-center uppercase pb-8 text-4xl"> {{page.uppcoming-travel-dates.title}} <h3>
     
         <!-- this is our grid div -->
         <div class="grid grid-cols-2 gap-8">
             
             <div>
-
-            {% for item in site.data.travel-dates %}
+            
+            {% for item in page.uppcoming-travel-dates.dates %}
                 <div class=" flex justify-between border-t-2 last:border-b-2 py-8">
                     <h4 class="m-0"> {{ item.destination }} </h4>
                     <p class="m-0"> {{ item.date }} </p>
@@ -19,8 +19,8 @@
 
             </div>
 
-            <div class="bg-stone-200 bg-cover bg-center p-5p pl-0 flex items-end" style="background-image: url('{{ page.travel-image}}');">
-                <h3 class="bg-stone-200 p-2 pr-4 text-4xl editable"> Currently in Tuscany </h3>
+            <div class="bg-stone-200 bg-cover bg-center p-5p pl-0 flex items-end" style="background-image: url('{{ page.uppcoming-travel-dates.dates[0].image}}');">
+                <h3 class="bg-stone-200 p-2 pr-4 text-4xl editable"> Currently in {{page.uppcoming-travel-dates.dates[0].destination}} </h3>
             </div>
         </div>
   

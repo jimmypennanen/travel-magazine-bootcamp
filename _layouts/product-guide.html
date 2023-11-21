@@ -1,10 +1,11 @@
 ---
-layout: default 
+layout: default
 ---
 
 {% include split-banner.html %}
 
-<section class="p-5p">
+<!-- image section -->
+<section class="p-10p">
     <div class="max-w-4xl m-auto">
         <h3 class="text-center uppercase text-4xl pb-5p m-0"> whats inside.</h3>
 
@@ -21,3 +22,33 @@ layout: default
 
     </div>
 </section>
+
+<!-- table of content section -->
+{% include table-of-content.html %}
+
+<!-- related guids -->
+<section class="p-5p pb-0 bg-stone-200">
+    <div class="max-w-screen-2xl p-5p">
+        <h3 class="text-center uppercase text-4xl m-0 px-5p pb-5p"> Related Products </h3>
+       
+        <div class="grid grid-cols-3 gap-6"> 
+        {% for item in site.products-guides limit:3 %}
+
+            {% include guides.html %}
+
+        {% endfor %}
+    </div>
+
+    </div>
+</section>
+
+
+
+
+
+
+
+    
+
+
+    
