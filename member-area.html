@@ -9,7 +9,14 @@ hero-banner:
   button-text:
   button-color:
   top-text:
-sticky-nav-title: explore more
+sticky-nav-title: explore
+members-content: 
+  - title: This is a title
+    content_html: some content 
+  - title: This is a second title 
+    content_html: some content 
+  - title: This is a third title 
+    content_html: some content
 seo:
   title: Travel Magazine
   description: "Your description goes here"
@@ -20,22 +27,50 @@ seo:
 
 {% include alt-hero-banner.html %}
 
-<section class="p-5p">
-  <div class="max-w-screen-2xl flex flex-col">
-    <div>
-      <h3> {{ page.sticky-nav-title }} </h3>
-      <nav>
 
-        {% for item in page. %}
 
-        <a href="{{ item.url }}"> {{ page.sticky-nav-text }} </a>
+<section class="min-h-80 p-5p grid grid-cols-4">
+
+  <div class="col-span-1">
+          <h3 class="text-4xl uppercase"> {{ page.sticky-nav-title }} </h3>
+          {% for item in page.members-content %}
+          <a href="#{{item.title | slugify }}" class="block"> {{item.title}}</a>
+          {% endfor %}
+
+  </div> 
+
+  <div class="col-span-3">
+
+      {% for item in page.members-content %}
+      <div id="{{item.title | slugify}}" class="p-5p border-b-2 border-black"> 
+          {{ item.content_html }}
+      </div>
+
+      {% endfor %}
+
+  </div> 
+  
+</section>
+
+
+<!-- <section class="p-5p min-h-80 grid grid-cols-4">
+  <div class="max-w-screen-2xl">
+
+      
+      
+      <div class="col-span-1">
+        
+        <h3 class="text-4xl uppercase"> {{ page.sticky-nav-title }} </h3>
+
+        {% for item in page.sticky-nav %}
+
+        <a href="{{ item.url }}" class="block"> {{ item.text }} </a>
 
         {% endfor %}
 
-      </nav>
-    </div>
+      </div>
 
 
 
   </div>
-</section>
+</section> -->

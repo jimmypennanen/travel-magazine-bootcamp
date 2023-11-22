@@ -47,5 +47,27 @@
     .button  {
         @apply inline-block px-4 py-2 uppercase tracking-wide bg-zinc-800 text-white ;
     }
+
+    #section-memberspace-login-form #memberspace-login-form input {
+        @apply border-0 border-b-2 border-black
+    }
+
+    #section-memberspace-login-form #memberspace-login-form ms-typography {
+        @apply uppercase tracking-[0.2em] font-normal text-sm text-stone-400
     
 }
+    #section-memberspace-login-form #memberspace-login-form .MemberSpaceWidgetInternal__Button_variant-link {
+        @apply text-stone-400 hover:text-stone-700 font-serif border-0 no-underline
+
+}
+
+    #section-memberspace-login-form #memberspace-login-form .MemberSpaceWidgetInternal__Button_variant-primary {
+        @apply bg-stone-400 hover:bg-stone-200
+    }
+
+    #section-memberspace-login-form #memberspace-login-form .MemberSpaceWidgetInternal__Button_variant-secondary {
+        @apply bg-stone-200  hover:bg-stone-400
+    }
+
+}
+/* this component needs to close   */
