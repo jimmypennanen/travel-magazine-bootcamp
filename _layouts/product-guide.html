@@ -38,12 +38,14 @@ layout: default
         {% for item in site.products-guides %}
 
             {% if page.url == item.url %}
-            <!-- do nothing -->
-            {% elsif counter < 3 %}
+            <!-- do not output guide -->
 
+            {% elsif counter < 3 %}
+            <!-- if page.url is not the same as item.url then then output post but stop at three  -->
                 {% include guides.html aspect='1.5' %}
 
             {% assign counter = counter | plus:1%}
+            
             {% endif %}
         {% endfor %}
     </div>
