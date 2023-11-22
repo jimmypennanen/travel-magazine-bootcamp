@@ -1,12 +1,12 @@
 ---
 layout: post
 title: Pittsburgh
-description: "This is a short description of the first blog post"
+description: "This is a short description of Pittsburgh"
 featured-image: /images/blog-bg-4.jpg
 author: Your Name
 banner:
   banner-image: /images/blog-bg-4.jpg
-  heading: Explore Sumbabwa
+  heading: Explore Pittsburgh
   description: Natures teaches you to appreciate the finer things in life, to be present, live in the moment and just breath.
 seo: 
   title: "This should appear in the browser tab"

@@ -1,4 +1,41 @@
 ---
 layout: default
+hero-banner:
+  banner-image: images/blog-bg-17.jpg
+  banner-position: 50% 50%
+  heading: Members Area
+  description: Surfing teaches you to appreciate the finer things in life, to be present, live in the moment and just breath. 
+  button-url:
+  button-text:
+  button-color:
+  top-text:
+sticky-nav-title: explore more
+seo:
+  title: Travel Magazine
+  description: "Your description goes here"
+  keywords: "your, keywords, go, here"
+  social_image: "path/to/social/image.jpg"
+  hide-from-google: false
 ---
-<p class="bg-gray-400"> This is some text on the perks </p>
+
+{% include alt-hero-banner.html %}
+
+<section class="p-5p">
+  <div class="max-w-screen-2xl flex flex-col">
+    <div>
+      <h3> {{ page.sticky-nav-title }} </h3>
+      <nav>
+
+        {% for item in page. %}
+
+        <a href="{{ item.url }}"> {{ page.sticky-nav-text }} </a>
+
+        {% endfor %}
+
+      </nav>
+    </div>
+
+
+
+  </div>
+</section>

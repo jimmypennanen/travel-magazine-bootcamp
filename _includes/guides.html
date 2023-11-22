@@ -1,6 +1,8 @@
-<div class="bg-white" style="order:{{forloop.index}}">
-    <a href="#">
-    <div class="bg-center bg-cover min-h-[30vw] relative" style="background-image: url('{{ item.featured-image }}');">
+
+<!---------------- this is the guide preview loop  --------------->
+<div class="bg-white" style="order:{{forloop.index}}"> 
+    <a href=" {{ item.url }} ">
+    <div class="bg-center bg-cover relative" style="background-image: url('{{ item.featured-image }}'); aspect-ratio: {{include.aspect | default: '1' }};">
     
         {% if item.tag %}
         <h3 class="bg-black text-white inline-block py-1 px-6 text-xl uppercase editable absolute top-2 -right-3"> {{ item.tag }} </h3>

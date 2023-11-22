@@ -57,3 +57,18 @@ layout: default
 <section class="p-5p">
     {% include faqs.html %}
 </section>
+
+<section class="p-5p pt-0 bg-stone-200">
+    <div class="max-w-screen-2xl p-5p">
+        <h3 class="text-center uppercase text-4xl m-0 px-5p pb-5p"> related products </h3>
+       
+        <div class="grid grid-cols-3 gap-6"> 
+        {% for item in site.products-presets limit:3 %}
+
+            {% include presets.html aspect='1.5' %}
+
+        {% endfor %}
+    </div>
+
+    </div>
+</section>

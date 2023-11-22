@@ -28,7 +28,7 @@ seo:
         <div class="grid grid-cols-3 gap-6"> 
         {% for item in site.products-guides limit:3 %}
 
-            {% include guides.html %}
+            {% include guides.html aspect='0.8' %}
 
         {% endfor %}
     </div>
@@ -45,7 +45,10 @@ seo:
         <div class="grid grid-cols-3 gap-6"> 
         {% for item in site.products-presets limit:3 %}
 
-            {% include presets.html %}
+            <div class="border border-black">
+              {% include presets.html aspect='0.8' %}
+            </div>
+            
 
         {% endfor %}
     </div>

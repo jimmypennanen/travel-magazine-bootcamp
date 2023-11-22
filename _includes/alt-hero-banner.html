@@ -1,0 +1,24 @@
+
+<!---------------- big image banner alt 2 --------------->
+
+<section class="min-h-50 bg-cover bg-center p-5p text-white flex items-center" style="background-image: url('{{ page.hero-banner.banner-image}}'); background-position: {{ page.hero-banner.banner-position }};">
+    <div class="max-w-screen-2xl">
+
+        {% if page.hero-banner.button-url  %}   
+        
+        <span> {{page.hero-banner.top-text}} </span>
+       
+        {% endif %}
+
+
+        <h1 class="text-9xl mb-0"> {{ page.hero-banner.heading}} </h1>
+        <p class="max-w-[50%]"> {{ page.hero-banner.description }}</p>
+
+        {% if page.banner.button-url  %}   
+        <a href="{{ page.hero-banner.button-url }}" class="border-b border-current inline-block mt-5" style="color: {{page.hero-banner.button-color}};"> {{ page.banner.button-text }} </a>
+        {% endif %}
+
+    </div>
+
+
+</section>

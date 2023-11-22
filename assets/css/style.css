@@ -542,6 +542,15 @@ p {
 .min-h-\[30vw\] {
   min-height: 30vw;
 }
+.min-h-50 {
+  min-height: 50vh;
+}
+.min-h-70 {
+  min-height: 70vh;
+}
+.min-h-100 {
+  min-height: 100vh;
+}
 .w-96 {
   width: 24rem;
 }
@@ -562,6 +571,9 @@ p {
 }
 .max-w-4xl {
   max-width: 56rem;
+}
+.max-w-2xl {
+  max-width: 42rem;
 }
 .shrink-0 {
   flex-shrink: 0;
@@ -588,6 +600,9 @@ p {
 }
 .grid-cols-6 {
   grid-template-columns: repeat(6, minmax(0, 1fr));
+}
+.flex-col {
+  flex-direction: column;
 }
 .items-end {
   align-items: flex-end;

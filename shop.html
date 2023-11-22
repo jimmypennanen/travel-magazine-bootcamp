@@ -33,13 +33,13 @@ seo:
         <div class="grid grid-cols-3 gap-6"> 
         {% for item in site.products-guides %}
 
-            {% include products.html type="guide" %}
+            {% include products.html type="guide" aspect='0.8' %}
 
         {% endfor %}
  
         {% for item in site.products-presets %}
 
-            {% include products.html type="preset" %}
+            {% include products.html type="preset" aspect='0.8' %}
 
         {% endfor %}
     </div>
