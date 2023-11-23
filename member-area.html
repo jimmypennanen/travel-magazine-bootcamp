@@ -42,7 +42,14 @@ seo:
   <div class="col-span-3">
 
       {% for item in page.members-content %}
+
+
       <div id="{{item.title | slugify}}" class="p-5p border-b-2 border-black"> 
+        <div class="min-w-full">
+        <img src="{{ item.content-image}}" alt="">
+        </div>
+        <h2> </h2>
+        <p> </p>
           {{ item.content_html }}
       </div>
 

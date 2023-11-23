@@ -515,11 +515,17 @@ p {
 .relative {
   position: relative;
 }
+.sticky {
+  position: sticky;
+}
 .-right-3 {
   right: -0.75rem;
 }
 .top-2 {
   top: 0.5rem;
+}
+.top-0 {
+  top: 0px;
 }
 .col-span-1 {
   grid-column: span 1 / span 1;
@@ -608,6 +614,9 @@ p {
 }
 .w-full {
   width: 100%;
+}
+.min-w-full {
+  min-width: 100%;
 }
 .max-w-4xl {
   max-width: 56rem;
