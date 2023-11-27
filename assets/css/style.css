@@ -591,6 +591,9 @@ p {
 .aspect-video {
   aspect-ratio: 16 / 9;
 }
+.h-\[100px\] {
+  height: 100px;
+}
 .min-h-100 {
   min-height: 100vh;
 }
@@ -608,6 +611,9 @@ p {
 }
 .min-h-\[30vw\] {
   min-height: 30vw;
+}
+.min-h-\[25vw\] {
+  min-height: 25vw;
 }
 .w-96 {
   width: 24rem;
@@ -636,6 +642,15 @@ p {
 .shrink-0 {
   flex-shrink: 0;
 }
+.shrink {
+  flex-shrink: 1;
+}
+.flex-grow {
+  flex-grow: 1;
+}
+.grow {
+  flex-grow: 1;
+}
 .list-disc {
   list-style-type: disc;
 }
@@ -658,6 +673,9 @@ p {
 }
 .grid-cols-6 {
   grid-template-columns: repeat(6, minmax(0, 1fr));
+}
+.flex-col {
+  flex-direction: column;
 }
 .items-end {
   align-items: flex-end;
@@ -688,6 +706,9 @@ p {
 }
 .self-center {
   align-self: center;
+}
+.overflow-scroll {
+  overflow: scroll;
 }
 .border {
   border-width: 1px;

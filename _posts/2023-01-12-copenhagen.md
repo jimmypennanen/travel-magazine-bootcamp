@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Copenhagen
-description: "This is a short description of Copenhagen"
+description: "This is a short description of Copenhagen This  is a paragraph in our blog post lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium doloribus debitis esse cum neque laborum iure sed architecto."
 featured-image: /images/blog-bg-12.jpg
 author: Your Name
 banner:
