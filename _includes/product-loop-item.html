@@ -1,4 +1,4 @@
-<a class="p-2 block" href="{{ item.url }}">
+<!-- <a class="p-2 block" href="{{ item.url }}">
     <div class="aspect-square relative">
         <img src="{{ item.featured-image }}" alt="{{item.title}}" class="absolute inset-0 w-full h-full object-cover object-center">
 
@@ -8,6 +8,25 @@
         
         {% endif %}
         
+    </div>
+    <div class="p-8 relative bg-stone-100">
+        
+        <span class="tag bg-stone-200 text-xs mb-2"> {{item.type}} </span>
+        <h2 class="font-serif text-2xl"> {{ item.title }} </h2>
+        <p class="line-clamp-3 tracking-wide mb-4 text-xs"> {{ item.description }}</p>
+        <p class="font-serif text-xl"> ${{item.price}} </p>
+
+    </div>
+</a> -->
+
+<a class="p-2 block {{item.type}}" href="{{ item.url }}">
+    <div class="aspect-square bg-[url('{{ item.hover-image }}')] bg-cover bg-center relative">
+        <img src="{{ item.featured-image }}" alt="{{item.title}}" class="hover:opacity-0 transition-opacity absolute inset-0 w-full h-full object-cover object-center">
+        {% if item.tag %}
+
+        <h3 class="bg-black text-white inline-block py-1 px-6 text-xl  uppercase editable absolute top-2 -right-3"> {{ item.tag }} </h3>
+        
+        {% endif %}
     </div>
     <div class="p-8 relative bg-stone-100">
         

@@ -21,28 +21,32 @@ seo:
   hide-from-google: false
 ---
 
-<section class="p-5p pt-0 pb-0 bg-stone-200">
-    <div class="max-w-screen-2xl p-5p">
-        <h3 class="text-center uppercase text-4xl m-0 px-5p pb-5p"> Exlore all our products </h3>
-        <div class="flex flex-cols-3 justify-center gap-4 pb-5p">
-            <p class=" border border-black px-8 py-2 hover:bg-black hover:text-white"> show all</p>
-            <p class=" border border-black px-8 py-2 hover:bg-black hover:text-white"> travel guides</p>
-            <p class=" border border-black px-8 py-2 hover:bg-black hover:text-white"> presets  </p>
-        </div>
-       
-        <div class="grid grid-cols-3 gap-6"> 
-        {% for item in site.products-guides %}
 
-            {% include product-loop-item.html type="guide" aspect='0.8' %}
 
-        {% endfor %}
- 
-        {% for item in site.products-presets %}
 
-            {% include products.html type="preset" aspect='0.8' %}
+<section class="p-5p max-w-screen-xl mx-auto" x-data="{ filter: 'all' }">
 
-        {% endfor %}
-    </div>
+	<h2 class="text-center uppercase text-4xl m-0 px-5p pb-5p"> Shop all products </h2> 
 
-    </div>
+	<div class="filter text-center pb-5"> 
+		    <a href="#" class=" inline-block border border-black px-8 py-2 hover:bg-black hover:text-white" @click.prevent="filter = 'all'">All</a>
+        <a href="#" class=" inline-block border border-black px-8 py-2 hover:bg-black hover:text-white" @click.prevent="filter = 'guide'">Travel Guides</a>
+        <a href="#" class=" inline-block border border-black px-8 py-2 hover:bg-black hover:text-white" @click.prevent="filter = 'preset'">Presets </a>
+	</div>
+
+
+	<div class="grid grid-cols-3 gap-4">
+
+	{% assign all_products = site.products-guides | concat: site.products-presets | sort: 'title'  %}
+
+	{% for item in all_products %}
+		
+		<div class="{{item.type | slugify }}" x-show="filter === 'all' || filter === '{{ item.type | slugify }}'">
+		{% include product-loop-item.html type=item.type  %}
+		</div>
+			
+	{% endfor %}
+
+	</div>
+
 </section>

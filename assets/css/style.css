@@ -941,6 +941,45 @@ footer nav a {
   --tw-bg-opacity: 1;
   background-color: rgb(255 255 255 / var(--tw-bg-opacity));
 }
+.bg-\[url\(\'\'\)\] {
+  background-image: url('');
+}
+.bg-\[url\(\'\/images\/blog-bg-1\.jpg\'\)\] {
+  background-image: url('/images/blog-bg-1.jpg');
+}
+.bg-\[url\(\'\/images\/blog-bg-2\.jpg\'\)\] {
+  background-image: url('/images/blog-bg-2.jpg');
+}
+.bg-\[url\(\'\/images\/blog-bg-3\.jpg\'\)\] {
+  background-image: url('/images/blog-bg-3.jpg');
+}
+.bg-\[url\(\'\/images\/blog-bg-4\.jpg\'\)\] {
+  background-image: url('/images/blog-bg-4.jpg');
+}
+.bg-\[url\(\'\/images\/blog-bg-5\.jpg\'\)\] {
+  background-image: url('/images/blog-bg-5.jpg');
+}
+.bg-\[url\(\'\/images\/blog-bg-6\.jpg\'\)\] {
+  background-image: url('/images/blog-bg-6.jpg');
+}
+.bg-\[url\(\'\/images\/blog-bg-7\.jpg\'\)\] {
+  background-image: url('/images/blog-bg-7.jpg');
+}
+.bg-\[url\(\'\/images\/blog-bg-10\.jpg\'\)\] {
+  background-image: url('/images/blog-bg-10.jpg');
+}
+.bg-\[url\(\'\/images\/blog-bg-11\.jpg\'\)\] {
+  background-image: url('/images/blog-bg-11.jpg');
+}
+.bg-\[url\(\'\/images\/blog-bg-12\.jpg\'\)\] {
+  background-image: url('/images/blog-bg-12.jpg');
+}
+.bg-\[url\(\'\/images\/blog-bg-8\.jpg\'\)\] {
+  background-image: url('/images/blog-bg-8.jpg');
+}
+.bg-\[url\(\'\/images\/blog-bg-9\.jpg\'\)\] {
+  background-image: url('/images/blog-bg-9.jpg');
+}
 .bg-cover {
   background-size: cover;
 }
@@ -1144,8 +1183,16 @@ footer nav a {
 .underline-offset-4 {
   text-underline-offset: 4px;
 }
+.filter {
+  filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow);
+}
 .transition-all {
   transition-property: all;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 150ms;
+}
+.transition-opacity {
+  transition-property: opacity;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   transition-duration: 150ms;
 }
@@ -1184,6 +1231,9 @@ footer nav a {
 .hover\:text-white:hover {
   --tw-text-opacity: 1;
   color: rgb(255 255 255 / var(--tw-text-opacity));
+}
+.hover\:opacity-0:hover {
+  opacity: 0;
 }
 @media (min-width: 640px) {
   .sm\:grid-cols-6 {
