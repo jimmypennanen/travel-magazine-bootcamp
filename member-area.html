@@ -4,28 +4,35 @@ hero-banner:
   banner-image: images/blog-bg-17.jpg
   banner-position: 50% 50%
   heading: Members Area
-  description: Surfing teaches you to appreciate the finer things in life, to be present, live in the moment and just breath. 
+  description: >-
+    Surfing teaches you to appreciate the finer things in life, to be present,
+    live in the moment and just breath.
   button-url:
   button-text:
   button-color:
   top-text:
 sticky-nav-title: explore
-members-content: 
-  - content-image: 
-  - title: This is a title
-    content_html: some content 
-  - title: This is a second title 
-    content_html: some content 
-  - title: This is a third title 
+members-content:
+  - content-image: /images/blog-bg-18.jpg
+  - title: Sol och bad
+    content_html: >-
+      <p>Trött på kylan i norden? Då har vi lösningen för dig! Dem kommande
+      veckorna kommer jag dela med mig av min vardag som spelmiljonär och dela
+      med mig av mina bästa tips! Häng med</p>
+  - content-image: /images/blog-bg-15.jpg
+  - title: New York och Bali
+    content_html: >-
+      <p>sedan 5 år tillbaka så lever vi våra liv pendlandes mellan Livets
+      storstad New York och Paradiset i Bali. Stort tack Bet365 ;)</p>
+  - title: This is a third title
     content_html: some content
 seo:
   title: Travel Magazine
-  description: "Your description goes here"
-  keywords: "your, keywords, go, here"
-  social_image: "path/to/social/image.jpg"
+  description: Your description goes here
+  keywords: your, keywords, go, here
+  social_image: path/to/social/image.jpg
   hide-from-google: false
 ---
-
 {% include alt-hero-banner.html %}
 
 
@@ -47,7 +54,7 @@ seo:
 
       <div id="{{item.title | slugify}}" class="p-5p border-b-2 border-black"> 
         <div class="min-w-full">
-        <img src="{{ item.content-image}}" alt="">
+        <img src="{{ item.content-image}}" alt="" />
         </div>
         <h2>{{ item.content-title }} </h2>
         <p> </p>
@@ -68,7 +75,7 @@ seo:
       
       <div class="col-span-1">
         
-        <h3 class="text-4xl uppercase"> {{ page.sticky-nav-title }} </h3>
+        <h3 class="text-4xl uppercase"> {{ page.sticky-nav-title }} 
 
         {% for item in page.sticky-nav %}
 
@@ -76,9 +83,9 @@ seo:
 
         {% endfor %}
 
-      </div>
+      
 
 
 
-  </div>
-</section> -->
+  
+ -->
