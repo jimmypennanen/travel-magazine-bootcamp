@@ -14,17 +14,17 @@ hero-banner:
 sticky-nav-title: explore
 members-content:
   - content-image: /images/blog-bg-18.jpg
-  - title: Sol och bad
+    title: Sol och bad
     content_html: >-
       <p>Trött på kylan i norden? Då har vi lösningen för dig! Dem kommande
       veckorna kommer jag dela med mig av min vardag som spelmiljonär och dela
       med mig av mina bästa tips! Häng med</p>
-  - content-image: /images/blog-bg-15.jpg
-  - title: New York och Bali
+    content-image: /images/blog-bg-15.jpg
+    title: New York och Bali
     content_html: >-
       <p>sedan 5 år tillbaka så lever vi våra liv pendlandes mellan Livets
       storstad New York och Paradiset i Bali. Stort tack Bet365 ;)</p>
-  - title: This is a third title
+    title: This is a third title
     content_html: some content
 seo:
   title: Travel Magazine
@@ -42,7 +42,7 @@ seo:
   <div class="col-span-1 sticky top-8 self-start">
           <h3 class="text-4xl uppercase"> {{ page.sticky-nav-title }} </h3>
           {% for item in page.members-content %}
-          <a href="#{{item.title | slugify }}" class="block"> {{item.title}}</a>
+          <a href="#{{item.content-title | slugify }}" class="block"> {{item.content-title}}</a>
           {% endfor %}
 
   </div> 
