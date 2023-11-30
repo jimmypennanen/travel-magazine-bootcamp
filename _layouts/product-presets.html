@@ -4,7 +4,7 @@ layout: default
 
 {% include split-banner.html %}
 
-<section class="p-5p pb-0">
+<!-- <section class="p-5p pb-0">
     <div class="max-w-screen-2xl grid grid-cols-2 items-center">
 
         <div>
@@ -26,17 +26,54 @@ layout: default
         </div>
 
     </div>
+</section> -->
+
+<section class=" p-5p">
+    <div class="grid grid-cols-5 max-w-screen-xl mx-auto">
+        <div class="col-span-3 p-8">
+
+            {% include before-and-after-slider.html %}
+
+        </div>
+        <div class="col-span-2 p-8 self-center text-center">
+            <h2 class="text-2xl uppercase"> Before & After </h2>
+            {{site.data.presets-settings.before-and-after-description_html}}
+        </div>
+
+    </div>
 </section>
 
-<section class="p-5p pb-0">
-    <div class="max-w-screen-2xl grid grid-cols-2 items-center">
+<section class="p-5p bg-stone-200">
+    <div class="grid sm:grid-cols-6 max-w-screen-xl mx-auto">
+
+        <div class="col-span-2 p-8 self-center">
+            <h2 class="text-2xl uppercase"> {{ page.list-title }} </h2>
+            {{site.data.presets-settings.presets-instructions_html}}
+           
+            {% for item in page.list %}
+
+            <ul class="list-disc mb-2 px-8"><li> {{item.text}} </li></ul>  
+
+              {% endfor %}
+        </div>
+
+        <div class="p-8 col-span-4">
+            {% include video.html 
+                vimeo-id=site.data.presets-settings.presets-instructions-vimeo-id %}
+        </div>
+
+    </div>
+</section> 
+
+<!-- <section class="p-5p pb-0">
+    <div class="max-w-screen-2xl grid grid-cols-2 items-center"> -->
 
         <!-- <div class="p-15p">
             <h2 class="uppercase"> how to use your presets </h2>
             <p> Lorem ipsum dolor, sit amet consectetur adipisicing elit. Iure voluptate quis inventore eligendi nostrum rem repellat, itaque sapiente esse et molestias eum, voluptatem incidunt mollitia asperiores. Harum fugit vel quasi.</p>
         </div> -->
 
-        <div class=" mx-auto">
+        <!-- <div class=" mx-auto">
             <h3 class="text-4xl uppercase pb-8"> {{page.list-title}} </h3>
             
                 {% for item in page.list %}
@@ -52,11 +89,19 @@ layout: default
         </div>
         
     </div>
+</section> -->
+
+<!-- Frequently Asked Questions -->
+<section class="p-5p bg-stone-200">
+    <div class="max-w-screen-xl mx-auto">
+        
+        <h3 class="text-4xl uppercase"> {{ page.faqs-title }} </h3>
+
+        {% include accordion.html  accordion-source=site.data.presets-settings.faqs %}
+
+    </div>
 </section>
 
-<section class="p-5p">
-    {% include faqs.html %}
-</section>
 
 <section class="p-5p pt-0 bg-stone-200">
     <div class="max-w-screen-2xl p-5p">
@@ -72,7 +117,7 @@ layout: default
 
             {% elsif counter < 3 %}
 
-            {% include presets.html aspect='1.5' %}
+            {% include product-loop-item.html %}
 
         {% assign counter = counter | plus:1 %}
 

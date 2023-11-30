@@ -49,7 +49,7 @@ seo:
 
 <!-- recent blog posts section -->
 
-<section class="p-5p overflow-x-auto whitespace-nowrap">
+<section class="p-5p">
 
   <div class="max-w-screen-xl mx-auto flex justify-between mb-4">
   
@@ -60,13 +60,13 @@ seo:
     
   </div>
   
-  <div class="max-w-screen-xl mx-auto grid grid-cols-7 ">
+  <div class="max-w-screen-xl mx-auto grid grid-cols-7 overflow-x-scroll">
 
       {% assign featured_posts = site.posts | where: 'featured', true %}
       
       {% for item in featured_posts limit: 5 %}
     
-      <div class="{% cycle 'col-span-2', 'col-span-3', 'col-span-2' %}">
+      <div class="{% cycle 'col-span-2', 'col-span-3', 'col-span-2' %} ">
         {% include post-loop-item.html %}
       </div>
 
@@ -76,4 +76,29 @@ seo:
 
 </section> 
 
+<section class="py-5p">
 
+  <div class="max-w-screen-xl mx-auto flex justify-between mb-4">
+  
+     <!-- this is a html icon for a left and right arrow ---> 
+    <div class="text-3xl">&#8249;</div>
+    <h2 class="uppercase font-serif text-2xl tracking-wide"> Recently on the blog </h2>
+    <div class="text-3xl">&#8250;</div>
+    
+  </div>
+  
+  <div class="max-w-screen-xl mx-auto flex flex-row overflow-x-scroll ">
+
+      {% assign featured_posts = site.posts | where: 'featured', true %}
+      
+      {% for item in featured_posts limit: 5 %}
+    
+      <div class="{% cycle 'basis-[25%] shrink-0', 'basis-[40%] shrink-0' %} ">
+        {% include post-loop-item.html %}
+      </div>
+
+      {% endfor %}
+
+  </div>
+
+</section> 
