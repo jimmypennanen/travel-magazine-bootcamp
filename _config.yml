@@ -1,9 +1,13 @@
 collections:
-  post:
+  posts:
     output: true
+    permalink: /posts/:year/:slug
+  archives:
+    output: true
+    permalink: /achives/:title
   products-presets:
     output: true
+    permalink: /shop/presets/:title
   products-guides:
     output: true
-  archives :
-    output: true
+    permalink: /shop/guides/:title

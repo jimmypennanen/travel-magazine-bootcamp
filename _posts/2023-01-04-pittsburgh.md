@@ -4,6 +4,7 @@ title: Pittsburgh
 description: "This is a short description of Pittsburgh"
 featured-image: /images/blog-bg-4.jpg
 author: Your Name
+featured: true
 banner:
   banner-image: /images/blog-bg-4.jpg
   heading: Explore Pittsburgh

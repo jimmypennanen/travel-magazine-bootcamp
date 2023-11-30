@@ -4,6 +4,7 @@ title: Stockholm
 description: "This is a short description of Stockholm"
 featured-image: /images/blog-bg-3.jpg
 author: Your Name
+featured: true
 banner:
   banner-image: /images/blog-bg-3.jpg
   heading: Explore Stockholm

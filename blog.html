@@ -18,20 +18,17 @@ seo:
 	<div class="max-w-screen-2xl">
 
 		<h3 class="text-center uppercase text-4xl m-0 px-5p pb-5p"> Recently on the blog.</h3>
-		
-		<div class="columns-3">
 
-			{% for item in site.posts %}
-		   
-			<div class="break-inside-avoid">
-				<img src="{{item.featured-image}}" alt="">
-				<h4 class="uppercase m-5"> {{ item.title }} </h4>
-				<p class="m-5"> {{ item.description }} </p>
-				<a href="{{item.url}}"" class="uppercase border-b border-black  inline-block m-5 mt-0">  Read More </a>  
-			</div>
-		   
-			{% endfor %}
-			</div>  
+
+		<div class="columns-3"> 
+
+			{% for item in site.posts limit:30 %} 
+				<div class="mb-2"> {% include post-loop-item-alternating-aspect.html %} </div> 
+			{% endfor %} 
+			
+		</div>
+		
+
 
 	</div>
 </section>

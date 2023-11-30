@@ -32,11 +32,11 @@ seo:
 
 <!-- facinating section -->
 <section class="p-5p bg-stone-200">
-  <div class="max-w-screen-2xl grid grid-cols-2">
+  <div class="max-w-screen-2xl grid grid-cols-2 mx-auto">
 
-    <div class="pb-120p bg-cover bg-center" style="background-image: url('{{ page.about-image}}');"></div>
-    <div class="p-5p self-center">
-      <h2 class="editable text-6xl max-w-md"> A fascinating heading about the site. </h2>
+    <div class="pb-100p bg-cover bg-center" style="background-image: url('{{ page.about-image}}');"></div>
+    <div class="py-15p px-8 self-center">
+      <h2 class="editable p-8 text-center -ml-[40%] text-6xl max-w-md"> A fascinating heading about the site. </h2>
       <p class="editable"> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. </p>
       <a href="" class="editable uppercase border-b border-black  inline-block mt-5"> read more </a>
     </div>
@@ -49,6 +49,31 @@ seo:
 
 <!-- recent blog posts section -->
 
-{% include post-loop-item.html %}
+<section class="p-5p overflow-x-auto whitespace-nowrap">
+
+  <div class="max-w-screen-xl mx-auto flex justify-between mb-4">
+  
+     <!-- this is a html icon for a left and right arrow ---> 
+    <div class="text-3xl">&#8249;</div>
+    <h2 class="uppercase font-serif text-2xl tracking-wide"> Recently on the blog </h2>
+    <div class="text-3xl">&#8250;</div>
+    
+  </div>
+  
+  <div class="max-w-screen-xl mx-auto grid grid-cols-7 ">
+
+      {% assign featured_posts = site.posts | where: 'featured', true %}
+      
+      {% for item in featured_posts limit: 5 %}
+    
+      <div class="{% cycle 'col-span-2', 'col-span-3', 'col-span-2' %}">
+        {% include post-loop-item.html %}
+      </div>
+
+      {% endfor %}
+
+  </div>
+
+</section> 
 
 

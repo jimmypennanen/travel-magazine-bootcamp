@@ -1,0 +1,20 @@
+<section class="min-h-80 bg-cover bg-center p-5p text-white flex items-center" style="background-image: url('{{ page.banner.banner-image}}'); background-position: {{ page.banner.banner-position }}">
+       
+        <div>
+            {% if page.banner.top-text  %}   
+        
+            <span> {{page.banner.top-text}} </span>
+           
+            {% endif %}
+    
+            <h1 class="text-[10vw] max-w-[60%] font-light mb-12 leading-[0.9]"> {{ page.banner.heading}} </h1>
+            <p class="max-w-screen-sm"> {{ page.banner.description }}</p>
+    
+            {% if page.banner.button-url  %} 
+    
+            <a href="{{ page.banner.button-url }}" class="border-b border-current inline-block mt-5" style="color: {{page.banner.button-color}}"> {{ page.banner.button-text }} </a>
+    
+            {% endif %}
+        </div>
+
+</section>

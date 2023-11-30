@@ -1,13 +1,52 @@
 
 <!-------------- preview loop for blog posts on the blog page -------------->
 
-<section class="py-5p px-2 bg-stone-200">
-    <!-- this is our max-w div -->
+
+<!-- <div class="break-inside-avoid">
+    <img src="{{item.featured-image}}" alt="">
+    <h4 class="uppercase m-5"> {{ item.title }} </h4>
+    <p class="m-5"> {{ item.description }} </p>
+    <a href="{{item.url}}"" class="uppercase border-b border-black  inline-block m-5 mt-0">  Read More </a>  
+</div> -->
+
+
+<a class="block p-2 mb-4" href="{{ item.url }}">
+    <div class="min-h-[25vw] relative">
+        <img src="{{ item.featured-image }}" alt="{{item.title}}" class="absolute inset-0 w-full h-full object-cover">
+    </div>
+    <div class="p-8 relative bg-stone-100 min-h-[10%]">
+        
+        <h2 class="mt-1 font-sans uppercase text-xl tracking-tight"> {{ item.title }} </h2>
+        <p class="line-clamp-1 tracking-wide mb-4"> {{ item.description }}</p>
+        <p class="uppercase underline font-serif text-xl underline-offset-4 tracking-wider"> 
+            Read More
+        </p>
+
+    </div>
+</a>
+
+<!-- <div class="">
+	
+	<div class="bg-cover aspect-square relative">
+        <img src="{{ item.featured-image }}" alt="{{item.title}}" class="absolute inset-0 w-full h-full object-cover">
+    </div>
+    
+    <div class="p-2">
+    	<h4> {{item.title}} </h4>
+    	<p> {{item.description }} </p>
+    	<a href="{{item.url}}">  Read More </a>  
+    </div>
+    
+</div> -->
+
+<!-- <section class="py-5p px-2 bg-stone-200">
+  
    <div class="max-w-screen-2xl">
        <h3 class="editable text-center uppercase pb-8 text-4xl"> recently on the blog... </h3>
      
     <div class="grid grid-cols-4 gap-2">
-    {% for item in site.posts | limit:3 %}
+
+    {% for item in site.posts %}
    
     <div class="{% cycle 'col-span-1','col-span-2' %} flex flex-col">
         <div class="bg-center bg-cover min-h-[25vw]" style="background-image: url('{{ item.featured-image }}');"></div>
@@ -19,4 +58,4 @@
     {% endfor %}
     </div>  
    </div>
-</section>
+</section> -->

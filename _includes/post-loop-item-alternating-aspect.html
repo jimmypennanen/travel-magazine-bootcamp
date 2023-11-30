@@ -1,0 +1,12 @@
+<div class="break-inside-avoid bg-rose-100">
+    <div class="p-2">
+
+        <img class="object-cover object-center
+                 {% cycle 'aspect-square', 'aspect-portrait', 'aspect-landscape' %}" 
+                 src="{{ item.featured-image }}">
+        <h3> {{ item.title }} </h3>
+        <p> {{ item.description }} </p> 
+        <a href="{{item.url}}" class="border-b border-black">  Read More </a> 
+    
+    </div>
+</div>

@@ -33,6 +33,10 @@
         @apply mb-[0.5em] leading-normal;
     }
 
+    footer nav a {
+        @apply p-1 block uppercase text-sm tracking-wide;
+    }
+
   }
 
 
