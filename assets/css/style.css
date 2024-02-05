@@ -675,18 +675,6 @@ footer nav a {
 .h-full {
   height: 100%;
 }
-.max-h-\[75vh\] {
-  max-height: 75vh;
-}
-.max-h-\[90vh\] {
-  max-height: 90vh;
-}
-.max-h-\[80vh\] {
-  max-height: 80vh;
-}
-.max-h-\[85vh\] {
-  max-height: 85vh;
-}
 .max-h-0 {
   max-height: 0px;
 }
@@ -708,17 +696,14 @@ footer nav a {
 .min-h-\[25vw\] {
   min-height: 25vw;
 }
-.min-h-\[30vw\] {
-  min-height: 30vw;
+.w-1\/2 {
+  width: 50%;
 }
 .w-96 {
   width: 24rem;
 }
 .w-full {
   width: 100%;
-}
-.w-1\/2 {
-  width: 50%;
 }
 .min-w-full {
   min-width: 100%;
@@ -756,26 +741,11 @@ footer nav a {
 .grow {
   flex-grow: 1;
 }
-.basis-1\/5 {
-  flex-basis: 20%;
-}
-.basis-2\/5 {
-  flex-basis: 40%;
-}
-.basis-1\/3 {
-  flex-basis: 33.333333%;
-}
-.basis-2\/3 {
-  flex-basis: 66.666667%;
-}
-.basis-\[30\%\] {
-  flex-basis: 30%;
+.basis-\[25\%\] {
+  flex-basis: 25%;
 }
 .basis-\[40\%\] {
   flex-basis: 40%;
-}
-.basis-\[25\%\] {
-  flex-basis: 25%;
 }
 .cursor-pointer {
   cursor: pointer;
@@ -791,9 +761,6 @@ footer nav a {
   -moz-column-break-inside: avoid;
        break-inside: avoid;
 }
-.grid-flow-col {
-  grid-auto-flow: column;
-}
 .grid-cols-2 {
   grid-template-columns: repeat(2, minmax(0, 1fr));
 }
@@ -803,20 +770,14 @@ footer nav a {
 .grid-cols-4 {
   grid-template-columns: repeat(4, minmax(0, 1fr));
 }
+.grid-cols-5 {
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+}
 .grid-cols-6 {
   grid-template-columns: repeat(6, minmax(0, 1fr));
 }
 .grid-cols-7 {
   grid-template-columns: repeat(7, minmax(0, 1fr));
-}
-.grid-cols-5 {
-  grid-template-columns: repeat(5, minmax(0, 1fr));
-}
-.grid-cols-12 {
-  grid-template-columns: repeat(12, minmax(0, 1fr));
-}
-.grid-cols-none {
-  grid-template-columns: none;
 }
 .flex-row {
   flex-direction: row;
@@ -857,14 +818,8 @@ footer nav a {
 .overflow-hidden {
   overflow: hidden;
 }
-.overflow-x-auto {
-  overflow-x: auto;
-}
 .overflow-x-scroll {
   overflow-x: scroll;
-}
-.whitespace-nowrap {
-  white-space: nowrap;
 }
 .rounded {
   border-radius: 0.25rem;
@@ -881,20 +836,17 @@ footer nav a {
 .border-b-2 {
   border-bottom-width: 2px;
 }
+.border-l {
+  border-left-width: 1px;
+}
+.border-r-4 {
+  border-right-width: 4px;
+}
 .border-t {
   border-top-width: 1px;
 }
 .border-t-2 {
   border-top-width: 2px;
-}
-.border-r-4 {
-  border-right-width: 4px;
-}
-.border-l {
-  border-left-width: 1px;
-}
-.border-r {
-  border-right-width: 1px;
 }
 .border-black {
   --tw-border-opacity: 1;
@@ -950,27 +902,6 @@ footer nav a {
 .bg-\[url\(\'\'\)\] {
   background-image: url('');
 }
-.bg-\[url\(\'\/images\/blog-bg-1\.jpg\'\)\] {
-  background-image: url('/images/blog-bg-1.jpg');
-}
-.bg-\[url\(\'\/images\/blog-bg-2\.jpg\'\)\] {
-  background-image: url('/images/blog-bg-2.jpg');
-}
-.bg-\[url\(\'\/images\/blog-bg-3\.jpg\'\)\] {
-  background-image: url('/images/blog-bg-3.jpg');
-}
-.bg-\[url\(\'\/images\/blog-bg-4\.jpg\'\)\] {
-  background-image: url('/images/blog-bg-4.jpg');
-}
-.bg-\[url\(\'\/images\/blog-bg-5\.jpg\'\)\] {
-  background-image: url('/images/blog-bg-5.jpg');
-}
-.bg-\[url\(\'\/images\/blog-bg-6\.jpg\'\)\] {
-  background-image: url('/images/blog-bg-6.jpg');
-}
-.bg-\[url\(\'\/images\/blog-bg-7\.jpg\'\)\] {
-  background-image: url('/images/blog-bg-7.jpg');
-}
 .bg-\[url\(\'\/images\/blog-bg-10\.jpg\'\)\] {
   background-image: url('/images/blog-bg-10.jpg');
 }
@@ -980,17 +911,20 @@ footer nav a {
 .bg-\[url\(\'\/images\/blog-bg-12\.jpg\'\)\] {
   background-image: url('/images/blog-bg-12.jpg');
 }
+.bg-\[url\(\'\/images\/blog-bg-7\.jpg\'\)\] {
+  background-image: url('/images/blog-bg-7.jpg');
+}
 .bg-\[url\(\'\/images\/blog-bg-8\.jpg\'\)\] {
   background-image: url('/images/blog-bg-8.jpg');
 }
 .bg-\[url\(\'\/images\/blog-bg-9\.jpg\'\)\] {
   background-image: url('/images/blog-bg-9.jpg');
 }
-.bg-cover {
-  background-size: cover;
-}
 .bg-\[length\:50vw\] {
   background-size: 50vw;
+}
+.bg-cover {
+  background-size: cover;
 }
 .bg-center {
   background-position: center;
@@ -1066,13 +1000,13 @@ footer nav a {
   padding-top: 5%;
   padding-bottom: 5%;
 }
-.py-8 {
-  padding-top: 2rem;
-  padding-bottom: 2rem;
-}
 .py-6 {
   padding-top: 1.5rem;
   padding-bottom: 1.5rem;
+}
+.py-8 {
+  padding-top: 2rem;
+  padding-bottom: 2rem;
 }
 .pb-0 {
   padding-bottom: 0px;
@@ -1086,11 +1020,17 @@ footer nav a {
 .pb-5p {
   padding-bottom: 5%;
 }
+.pb-6 {
+  padding-bottom: 1.5rem;
+}
 .pb-75p {
   padding-bottom: 75%;
 }
 .pb-8 {
   padding-bottom: 2rem;
+}
+.pb-\[75\%\] {
+  padding-bottom: 75%;
 }
 .pl-0 {
   padding-left: 0px;
@@ -1100,12 +1040,6 @@ footer nav a {
 }
 .pt-0 {
   padding-top: 0px;
-}
-.pb-\[75\%\] {
-  padding-bottom: 75%;
-}
-.pb-6 {
-  padding-bottom: 1.5rem;
 }
 .text-left {
   text-align: left;
